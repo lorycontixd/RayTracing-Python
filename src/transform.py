@@ -1,4 +1,6 @@
 import numpy as np
+
+from .matrix import Matrix3
 from .vector3 import Vector3
 
 
@@ -21,6 +23,12 @@ class Transform:
 
     def GetRotation(self):
         return self.rotation
+
+    def Translate(self, translation:Vector3):
+        self.position = self.position + translation
+
+    def Rotate(self, rotation:Matrix3):
+        self.rotation
 
     @staticmethod
     def forward():

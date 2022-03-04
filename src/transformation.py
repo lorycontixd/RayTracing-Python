@@ -1,8 +1,14 @@
-import numpy
 import numpy as np
+from .matrix import Matrix3
 
 
 class Transformation:
-    def __init__(self, matrix:np.ndarray=None):
-        if not matrix:
-            matrix = np.identity(4)
+    def __init__(self):
+        pass
+
+
+class Translation(Transformation):
+    def __init__(self, dx, dy, dz):
+        self.matrix = Matrix3([
+            [1,0,]
+        ])

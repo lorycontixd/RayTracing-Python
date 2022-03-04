@@ -89,7 +89,7 @@ class Vector3:
             return other.x * self.x + other.y * self.y + other.z * self.z
 
     def __truediv__(self, other):
-        if isinstance(other, (int, float)):
+        if isinstance(other, (int, float, np.int32, np.int64, np.float32, np.float64)):
             assert other != 0
             return Vector3(self.x / other, self.y / other, self.z / other)
 
